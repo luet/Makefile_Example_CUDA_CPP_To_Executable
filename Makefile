@@ -3,7 +3,7 @@
 ## USER SPECIFIC DIRECTORIES ##
 
 # CUDA directory:
-CUDA_ROOT_DIR=/usr/local/cuda
+CUDA_ROOT_DIR=/usr/local/cuda-11.3/
 
 ##########################################################
 
@@ -38,7 +38,7 @@ CUDA_LINK_LIBS= -lcudart
 SRC_DIR = src
 
 # Object file directory:
-OBJ_DIR = bin
+OBJ_DIR = obj
 
 # Include header file diretory:
 INC_DIR = include
@@ -75,7 +75,7 @@ $(OBJ_DIR)/%.o : $(SRC_DIR)/%.cu $(INC_DIR)/%.cuh
 
 # Clean objects in object directory.
 clean:
-	$(RM) bin/* *.o $(EXE)
+	$(RM) obj/* *.o $(EXE)
 
 
 
