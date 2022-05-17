@@ -5,7 +5,7 @@ This repo is a sample Makefile for building a project that has both C++ (.cpp an
        |--> Makefile
        |--> src/ (source files)
        |--> include/ (header files)
-       |--> bin/
+       |--> obj/
 ```
 
 For example, you could have multiple .cpp and .cu files in the source directory (src/), multiple .h and .cuh header files in the header directory (include/), and the file with the main() function (titled main.cpp in this example) in the base directory. An example of this could be the following:
@@ -24,7 +24,7 @@ For example, you could have multiple .cpp and .cu files in the source directory 
               |--> file2.h
               |--> file1.cuh
               |--> file2.cuh
-       |--> bin/
+       |--> obj/
 ```
 
 The Makefile in this repo compiles a .cu and .cuh file called cuda_kernel.cu and cuda_kernel.cuh, which contains a simple CUDA device function. The cuda_kernel.cuh header file is included in the main.cpp file and called in the main() function. The Makefile will compile all the CUDA and C++ source files in src/ first, then compile the main.cpp file, and finally link them together.
@@ -77,7 +77,7 @@ The project's file structure can be changed if necessary.
 SRC_DIR = src
 
 # Object file directory:
-OBJ_DIR = bin
+OBJ_DIR = obj
 
 # Include header file diretory:
 INC_DIR = include
